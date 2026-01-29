@@ -34,6 +34,7 @@ class RuleDuplicatorPlugin
         try {
             $result->setCreatedIn(self::STAGING_VERSION_MAIN);
             $result->setUpdatedIn(self::STAGING_VERSION_MAX);
+            $result->setDeactivatedIn(null);
             $result->unsRowId();
 
             // Unset actions and conditions, as they get populated in \Magento\Rule\Model\AbstractModel::beforeSave

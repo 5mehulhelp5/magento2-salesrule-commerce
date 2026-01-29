@@ -48,6 +48,11 @@ class RuleDuplicatorPluginTest extends TestCase
             ->willReturnSelf();
 
         $result->expects($this->once())
+            ->method('setDeactivated')
+            ->with(null)
+            ->willReturnSelf();
+
+        $result->expects($this->once())
             ->method('unsRowId')
             ->willReturnSelf();
 
